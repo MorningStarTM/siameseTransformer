@@ -14,10 +14,10 @@ hp['batch_size'] = 2
 hp['lr'] = 1e-5
 hp["num_epochs"] = 30
 hp['num_classes'] = 3
-hp["num_layers"] = 3
+hp["num_layers"] = 1
 hp["hidden_dim"] = 256
-hp["mlp_dim"] = 256
-hp['num_heads'] = 3
+hp["mlp_dim"] = 128
+hp['num_heads'] = 1
 hp['dropout_rate'] = 0.1
 hp['class_names'] = ["s1", "s2", "s3"]
 
