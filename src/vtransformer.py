@@ -2,7 +2,7 @@ import tensorflow as tf
 from keras import layers
 from keras.models import Model
 import numpy as np
-from resnet import build_resnet
+from .resnet import build_resnet
 
 hp = {}
 hp['image_size'] = 256
@@ -101,3 +101,10 @@ def CNN_ViT(hp):
     
     x = layers.LayerNormalization()(x)
     x = x[:, 0, :]
+    x = layers.Dense(64, activation='relu')(x)
+    x = layers.Dense(8, activation='relu')(x)
+
+    model = Model(inputs, x)
+    
+
+    return model
