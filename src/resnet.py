@@ -43,7 +43,5 @@ def build_resnet(input_shape):
     x = resnet_block(x, filters=256, strides=2)
     x = resnet_block(x, filters=256)
     
-    x = resnet_block(x, filters=256, strides=2)
-    x = resnet_block(x, filters=256)
     
     return x

@@ -2,7 +2,7 @@ import tensorflow as tf
 from keras import layers
 from keras.models import Model
 import numpy as np
-
+from resnet import build_resnet
 
 hp = {}
 hp['image_size'] = 256
@@ -101,4 +101,3 @@ def CNN_ViT(hp):
     
     x = layers.LayerNormalization()(x)
     x = x[:, 0, :]
-    x = layers.Dense(hp['num_classes'], activation='softmax')(x)
